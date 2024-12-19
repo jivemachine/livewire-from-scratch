@@ -8,10 +8,11 @@
                 class="p-4 text-white bg-gray-700 border rounded-md"
                 wire:model.fill="greeting"
             >
-                <option value="Hello">Hello</option>
-                <option value="Hi">Hi</option>
-                <option value="Hey">Hey</option>
-                <option value="Howdy" selected>Howdy</option>
+                @foreach ($greetings as $item)
+                    <option value="{{$item->greeting}}">
+                        {{$item->greeting}}
+                    </option>
+                @endforeach
             </select>
             <input
                 type="text"
