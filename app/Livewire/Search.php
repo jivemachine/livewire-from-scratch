@@ -3,14 +3,17 @@
 namespace App\Livewire;
 
 use App\Models\Article;
-use Livewire\Component;
 use Livewire\Attributes\Validate;
+use Livewire\Component;
 
 class Search extends Component
 {
     #[Validate('required')]
     public $searchText = '';
+
     public $results = [];
+
+    public $placeholder;
 
     public function updatedSearchText($value)
     {

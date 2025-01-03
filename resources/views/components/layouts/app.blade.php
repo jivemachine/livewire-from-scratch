@@ -916,6 +916,7 @@
                                 fill="currentColor" />
                         </svg>
                     </div>
+                    <livewire:search placeholder="type something to search..." />
                 </header>
 
                 <main class="mt-6">
